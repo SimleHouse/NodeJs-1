@@ -15,17 +15,27 @@ db.open(function(err,db){
                 console.log('连接表testMondodb失败');
             }else{
                 //var data=[{name:'nima',password:'10080'}];
-                collection.insertOne({name:'nima',password:'10080'},function(err,result){
+                collection.insertOne({name:'nima1',password:'10080'},function(err,result){
                     if(err){
                         console.log('Error:0'+err);
                     }else{
+                        //console.log(result);
+                    }
+                });
+
+                collection.find({name:'nima'}).toArray(function(err,result) {
+                    if (err) {
+                        console.log('数据查询失败');
+                    } else {
                         console.log(result);
                     }
-                })
+                });
+
             }
         });
+
     }
-    console.log(arguments);
+    //console.log(arguments);
 });
 
 
