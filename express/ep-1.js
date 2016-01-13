@@ -1,5 +1,6 @@
 /**
  * Created by talent on 2016/1/11.
+ * 太开心了终于能将mongodb于nodejs连接了
  */
 var express=require('express');
 var app=express();
@@ -19,11 +20,11 @@ db.open(function(err,db){
                     if(err){
                         console.log('Error:0'+err);
                     }else{
-                        //console.log(result);
+                        console.log(result);
                     }
                 });
 
-                collection.find({name:'nima'}).toArray(function(err,result) {
+                collection.find({name:'nima1'}).toArray(function(err,result) {
                     if (err) {
                         console.log('数据查询失败');
                     } else {
@@ -33,10 +34,9 @@ db.open(function(err,db){
 
             }
         });
-
     }
     //console.log(arguments);
-    //hahahh
+
 });
 
 
