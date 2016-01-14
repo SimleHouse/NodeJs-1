@@ -1,0 +1,11 @@
+{
+  "name": "NodeJs-1",
+  "version": "0.0.1",
+  "description":"My First App Demo",
+  "dependencies":{
+    "express":"4.x"
+  },
+  "description":{
+    "mongodb":"2.1.4"
+  }
+}
